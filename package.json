@@ -1,10 +1,7 @@
 {
-  "name": "n8n-v0",
+  "name": "logicloop",
   "private": true,
   "scripts": {
-    "dev:backend": "cd apps/backend && bun run dev",
-    "build:backend": "cd apps/backend && bun run build",
-    "prisma": "cd packages/db && bunx prisma migrate dev && bunx prisma generate",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -12,29 +9,12 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
-    "@types/dotenv": "^8.2.3",
-    "@types/node": "^24.3.1",
     "prettier": "^3.6.2",
-    "prisma": "^6.15.0",
-    "turbo": "^2.5.6",
-    "typescript": "^5.9.2"
+    "turbo": "^2.5.8",
+    "typescript": "5.9.2"
   },
+  "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
-  },
-  "packageManager": "bun@1.2.4",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "dependencies": {
-    "@google/genai": "^1.21.0",
-    "@google/generative-ai": "^0.24.1",
-    "@prisma/client": "^6.15.0",
-    "@types/cookie-parser": "^1.4.9",
-    "cookie-parser": "^1.4.7",
-    "dotenv": "^17.2.2",
-    "esbuild": "0.25.9",
-    "react-router-dom": "^7.9.1"
   }
 }
